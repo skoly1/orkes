@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "pm2 start --name 'orkes-server' server.js --watch"
   },
   "author": "",
