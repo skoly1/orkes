@@ -49,17 +49,15 @@ function App() {
       {state.matches("failure") && (
         <div style={{ color: "#fff" }}>Failed to fetch page</div>
       )}
-      {/* {state.matches("success") && ( */}
       <Stack gap={4}>
-        {state.context.data.map((ns: DataArrayItem) => {
+        {state.context.data.map((ns: DataArrayItem, dataIndex: number) => {
           return (
-            <div key={ns.node.nid}>
+            <div key={`${ns.node.nid}_${dataIndex}`}>
               <CardComp data={ns} />
             </div>
           );
         })}
       </Stack>
-      {/* )} */}
       <div ref={endOfPageRef} />
     </Container>
   );
